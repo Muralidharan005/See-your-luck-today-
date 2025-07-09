@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>See the Lucky</title>
+    <style>
+        body {
+            font-family: calibri, century;
+            background-color: #0faade; /* Black background */
+            color: #FFD700; /* Golden text */
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #FFD700; /* Golden title */
+        }
+
+        p {
+            color: #FFD700; /* Golden text */
+        }
+
+        #quote {
+            font-size: 24px;
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #333; /* Dark grey box */
+            border-radius: 8px;
+            color: #FFD700; /* Golden text inside the box */
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.7); /* Gold shadow effect */
+        }
+
+        #generateQuote {
+            padding: 10px 20px;
+            background-color: #FFD700; /* Golden button */
+            color: #000; /* Black text */
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #generateQuote:hover {
+            background-color: #FFA500; /* Slightly darker gold on hover */
+            color: #000;
+        }
+
+        #nameInput {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #FFD700;
+            background-color: #080607; /* Dark background for input field */
+            color: #FFD700; /* Golden text for input */
+        }
+
+        footer {
+            margin-top: 30px;
+            color: #888; /* Grey color for the footer text */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Welcome to See the Lucky</h1>
+    <p> Enter your name to get your lucky quote!</p>
+
+    <!-- Name input portal -->
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+
+    <div id="quote">Click the button to see your lucky quote!</div>
+    <button id="generateQuote">See My Lucky Quote</button>
+
+    <footer>
+        <p>&copy; 2024 See the Lucky. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const quotes = [
+            "Keep moving on in life. Everything you need will come to you at a perfect time. Just believe in yourself and keep doing hard work.",
+            "Just wanted to let you know that while I have a lot of amazing friends in my life, none compare to you",
+            "May your pockets be heavy and your heart be light.",
+            "You cannot change your past but you can shape the future. Start shaping your future today",
+            "my lovely and dearest friend! I wish you a beautiful day that is full of laughter and happiness.",
+            "Indeed today is a beautiful day all because of friends like you",
+            "If you want to rise to the highest position, you have to start working towards that position today.",
+            "I know how difficult you are finding it waking up this morning, all because you are lazy",
+            "Every morning is a reminder that you have a purpose in life",
+            "The beauty of life is not how much you are happy, but how much you make others happy",
+            "I know things got off to a rough start, but don't lose hope. You're in for a wonderful day ahead",
+            "Each morning entitles us to a fresh start. Take advantage and enjoy the day",
+            "Another day, another new beginning. Get out there and kill it today",
+            "True friendship is sending over a daily morning message even though you have nothing to say",
+            "Just know that even though I'm not there with you, you make my morning that much brighter. You are a true friend",
+            "Each day brings us amazing opportunities",
+            "Nothing is impossible in this world if you have made a choice",
+            "May you enjoy every moment of the day working hard to achieve your dreams",
+            "Accept your flaws and live your life with confidence.",
+            "Make sure that you enjoy this day to the fullest so that you can have a sound sleep at night",
+            "It is another wonderful day and everything is going to fall in place.",
+            "let your morning be the start of your new life. do your best and forget about the rest.",
+            "Speed doesn't matter if you have a constant pace.",
+            "Opportunities are like sunset, if you wait too long you miss them.",
+            " Each morning we are born again, what we do today is what matters.",
+            " Happiness is not by chance, but by choice.",
+            " If you can change your mind, you can change your life.",
+            "Be happy with nothing and you will be happy with everything.",
+            "Always believe something wonderful is about to happen.",
+            "A smile is the universal welcome.",
+            "The day you decide to do it is your lucky day.",
+            "When the sun is wide awake, why are you sleeping?",
+            "Fools wait for a lucky day,but everyday is a lucky day for an industrious man",
+             ];
+        // Function to generate random lucky quote with user's name
+        document.getElementById("generateQuote").addEventListener("click", function() {
+            const name = document.getElementById("nameInput").value;
+            if (name) {
+                const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                document.getElementById("quote").textContent = randomQuote;
+            } else {
+                document.getElementById("quote").textContent = "Please enter your name to get your lucky quote!";
+            }
+        });
+    </script>
+
+</body>
+</html>
